@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<md:EntityDescriptor entityID="https://nexugo-svc.go.nexusgroup.com/idp" xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata">
+    <md:IDPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol" WantAuthnRequestsSigned="false">
+        <md:KeyDescriptor use="signing">
+            <xd:KeyInfo xmlns:xd="http://www.w3.org/2000/09/xmldsig#">
+                <xd:X509Data>
+                    <xd:X509Certificate>MIIEGTCCAwGgAwIBAgIFI1cjh1YwDQYJKoZIhvcNAQELBQAwga0xCzAJBgNVBAYTAlNFMRIwEAYDVQQIEwlTdG9ja2hvbG0xFDASBgNVBAcTC1RlbGVmb25wbGFuMRwwGgYDVQQKExNUZWNobm9sb2d5IE5leHVzIEFCMRAwDgYDVQQLEwdOZXh1c0dPMRowGAYDVQQDExFnby5uZXh1c2dyb3VwLmNvbTEoMCYGCSqGSIb3DQEJARYZY29udGFjdC5zZUBuZXh1c2dyb3VwLmNvbTAgFw0xNzAyMjcxNTU2MDBaGA85OTk5MTIzMTIzNTk1OVowga0xCzAJBgNVBAYTAlNFMRIwEAYDVQQIEwlTdG9ja2hvbG0xFDASBgNVBAcTC1RlbGVmb25wbGFuMRwwGgYDVQQKExNUZWNobm9sb2d5IE5leHVzIEFCMRAwDgYDVQQLEwdOZXh1c0dPMRowGAYDVQQDExFnby5uZXh1c2dyb3VwLmNvbTEoMCYGCSqGSIb3DQEJARYZY29udGFjdC5zZUBuZXh1c2dyb3VwLmNvbTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBANtBTG0zCNdEXczTt4tbYbyNft9Z0v47SHNhilMF5tWld1Bi3e5fFf/7V4UEn8PzWhah6F5knjJTaUVi5s+HvTHa0XwhpHmofmUfRXdpXV0qlMiWWTcGhVmdkb+FAYE0aVK9HjuapNdCE2rn/ysGHNEDUIfQ3nPuMZxLIsJ0Pa1ueBKK5ZFuQ64pcO/alKRu5aIGoRPlmOAuqPW8F+Z9y1w9V5aq3MR9pkX9zrnd3YzSx3DwtxR29eponOFg9m2FKdcnT+son+sjRmukegSJ89KQdKGRA6sAs4bmzdS/TukIq4U+PASlzCXTKexdcj8cEf68rMq1TG2hbRKFuoHK+sECAwEAAaM8MDowDAYDVR0TAQH/BAIwADAdBgNVHQ4EFgQU+cuUQefAIVxKehX1lFAve+EJeHYwCwYDVR0PBAQDAgXgMA0GCSqGSIb3DQEBCwUAA4IBAQAAVvZ29vvIMxi7qo2a7Nm+gYDvqStFtN4NpJpZyzPTTKzeU7d5ZtNMT/trxCsAachS+SbQsl9SJVSuR0KVFRDZDg+70YyxeUucTMYYb5QgaUHSrEJSMy26zh9EFFbkcUEbLedLjbT4Rk+UXwIjvwa4osRETfd7WDaKTsgat30F3AboJvNiRvG6NCXKeUiklAO8Nqti/pAigJcI5HVK9rcIjvPYQm2gFcJeVShitFCg3kAeBIJu6d6InfK2BhVN2LGMKSaPL08N8TRv5Y+OcAX9zG/JHp5gafRDPg+prNw89k5ddV8+VgaCIPMiekdnslqAdrwZBGEoQfYucfrft0EM</xd:X509Certificate>
+                </xd:X509Data>
+            </xd:KeyInfo>
+        </md:KeyDescriptor>
+        <md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent</md:NameIDFormat>
+        <md:NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</md:NameIDFormat>
+        <md:NameIDFormat>urn:oasis:names:tc:SAML:1.1:nameid-format:emailAddress</md:NameIDFormat>
+        <md:NameIDFormat>urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified</md:NameIDFormat>
+        <md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" Location="https://idp.go.nexusgroup.com/wa/auth/saml/"/>
+        <md:SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://idp.go.nexusgroup.com/wa/auth/saml/"/>
+    </md:IDPSSODescriptor>
+</md:EntityDescriptor>

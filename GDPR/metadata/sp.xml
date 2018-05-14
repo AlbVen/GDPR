@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<md:EntityDescriptor entityID="urn:localhost:ecatzr6lbqtlzxy" xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata">
+    <md:SPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol" WantAssertionsSigned="false" AuthnRequestsSigned="false">
+        <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect" isDefault="true" index="0" Location="https://localhost:52280/Message"/>
+    </md:SPSSODescriptor>
+</md:EntityDescriptor>
