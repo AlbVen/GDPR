@@ -1,0 +1,70 @@
+﻿@page
+@model MessageModel
+@{
+	ViewData["Title"] = "Ditt ärende";
+}
+
+
+
+<form>
+	<fieldset>
+		<div class="container">
+			<div class="row">
+				<div class="col-12">
+					<h1 class="card-title h1-responsive mt-5"><strong>@ViewData["Title"]</strong></h1>
+					<p>
+						Här anger du vad du vill ansöka om att få utfört. Beroende på vilken typ av ärende det är, kan det ta upp till 30 dagar innan det är utfört.
+						Fyll i din e-post eller mobilnummer så skickar vi dig information när ärendet är slutfört, eller kontaktar dig om vi behöver komplettering.
+					</p>
+					<!-- Default form contact -->
+
+					<p class="h4 mb-4">1) Välj ditt ärende</p>
+
+					<div class="form-check mb-4">
+						<input name="group2" type="radio" class="form-check-input with-gap" id="radioWithGap1" checked="checked">
+						<label class="form-check-label" for="radioWithGap1">Registerutdrag</label>
+					</div>
+
+					<div class="form-check mb-4">
+						<input name="group2" type="radio" class="form-check-input with-gap" id="radioWithGap2">
+						<label class="form-check-label" for="radioWithGap2">Radering (din rätt att bli glömd)</label>
+					</div>
+
+					<div class="form-check mb-4">
+						<input name="group2" type="radio" class="form-check-input with-gap" id="radioWithGap3">
+						<label class="form-check-label" for="radioWithGap3">Data i portabelt format</label>
+					</div>
+
+					<div class="form-check mb-4">
+						<input name="group2" type="radio" class="form-check-input with-gap" id="radioWithGap4">
+						<label class="form-check-label" for="radioWithGap4">Invända</label>
+					</div>
+
+					<div class="form-check mb-4">
+						<input name="group2" type="radio" class="form-check-input with-gap" id="radioWithGap5">
+						<label class="form-check-label" for="radioWithGap5">Begränsning av behandling av dina lagrade uppgifter hos oss</label>
+					</div>
+
+					<div class="form-check mb-4">
+						<input name="group2" type="radio" class="form-check-input with-gap" id="radioWithGap6">
+						<label class="form-check-label" for="radioWithGap6">Rättelse av dina uppgifter</label>
+					</div>
+
+					<!-- Default input email -->
+					<p class="h4 mb-4">2) Telefonnummer eller e-post</p>
+					<input type="text" id="defaultFormContactEmailEx" required minlength="6" class="form-control">
+
+					<br>
+
+					<!-- Default textarea message -->
+					<p class="h4 mb-4">3) Meddelande till Insplanet</p>
+					<textarea type="text" id="defaultFormContactMessageEx" pattern="\w" class="form-control" maxlength="300" rows="3"></textarea>
+						<div class="text-center py-4 mt-3">
+							<button id="submit" class="btn btn-primary" type="submit"  asp-page="/Thankyou">Skicka in din ansökan</button>
+						</div>
+
+				</div>
+			</div>
+		</div>
+	</fieldset>
+</form>

@@ -1,0 +1,58 @@
+﻿@page
+@model IndexModel
+@{
+	ViewData["Title"] = "Välkommen";
+}
+
+<div class="container">
+
+	<!--Jumbotron-->
+	<div class="jumbotron">
+
+		<!--Title-->
+		<h1 class="card-title h2-responsive mt-2"><strong>Välkommen</strong></h1>
+		<!--Subtitle-->
+		<p class="mb-4 font-bold">Via denna portal erbjuder vi dig möjlighet att utöva dina rättigheter enligt gällande personuppgiftslagstiftning. Här kan du ansöka om:</p>
+
+		<!--Text-->
+		<div class="d-flex">
+			<p class="card-text mb-3" style="max-width: 43rem;">
+				<ul>
+					<li>Registerutdrag</li>
+					<li>Radering (din rätt att bli glömd)</li>
+
+					<li>Data i portabelt format</li>
+
+					<li>Invända</li>
+
+					<li>Begränsning av behandling av dina lagrade uppgifter hos oss</li>
+
+					<li>Rättelse av dina uppgifter</li>
+				</ul>
+			</p>
+		</div>
+
+		<hr class="my-4">
+
+		<form>
+			<div class="form-wrapper">
+				<img src="~/img/svg/bankid.svg" alt="BankID" />
+				<div class="col-8">
+					<label for="personalId" class="grey-text">Personnummer</label>
+					<input type="text" id="personalId" class="form-control form-control-lg" placeholder="">
+					<small id="passwordHelpBlockMD" class="form-text text-muted">
+						YYYYMMDD-XXXX
+					</small>
+					<div class="text-center mt-4">
+						<button class="btn btn-primary waves-effect waves-light text-center" asp-page="/Message">
+							Logga in
+						</button>
+					</div>
+				</div>
+			</div>
+		</form>
+	</div>
+</div>
+
+
+
