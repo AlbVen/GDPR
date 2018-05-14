@@ -1,12 +1,14 @@
 ﻿@page
-@model MessageModel
+@model Models.FormModel
+
 @{
 	ViewData["Title"] = "Ditt ärende";
+		
 }
 
 
 
-<form>
+<form asp-action="Thankyou" asp-controller="Form" >
 	<fieldset>
 		<div class="container">
 			<div class="row">
@@ -21,47 +23,47 @@
 					<p class="h4 mb-4">1) Välj ditt ärende</p>
 
 					<div class="form-check mb-4">
-						<input name="group2" type="radio" class="form-check-input with-gap" id="radioWithGap1" checked="checked">
+						<input name="CustomerCase" value="Logfile" type="radio" class="form-check-input with-gap" id="radioWithGap1" checked="checked">
 						<label class="form-check-label" for="radioWithGap1">Registerutdrag</label>
 					</div>
 
 					<div class="form-check mb-4">
-						<input name="group2" type="radio" class="form-check-input with-gap" id="radioWithGap2">
+						<input name="CustomerCase" value="Erase" type="radio" class="form-check-input with-gap" id="radioWithGap2">
 						<label class="form-check-label" for="radioWithGap2">Radering (din rätt att bli glömd)</label>
 					</div>
 
 					<div class="form-check mb-4">
-						<input name="group2" type="radio" class="form-check-input with-gap" id="radioWithGap3">
+						<input name="CustomerCase" value="Data" type="radio" class="form-check-input with-gap" id="radioWithGap3">
 						<label class="form-check-label" for="radioWithGap3">Data i portabelt format</label>
 					</div>
 
 					<div class="form-check mb-4">
-						<input name="group2" type="radio" class="form-check-input with-gap" id="radioWithGap4">
+						<input name="CustomerCase" value="Object" type="radio" class="form-check-input with-gap" id="radioWithGap4">
 						<label class="form-check-label" for="radioWithGap4">Invända</label>
 					</div>
 
 					<div class="form-check mb-4">
-						<input name="group2" type="radio" class="form-check-input with-gap" id="radioWithGap5">
+						<input name="CustomerCase" value="Limit Use" type="radio" class="form-check-input with-gap" id="radioWithGap5">
 						<label class="form-check-label" for="radioWithGap5">Begränsning av behandling av dina lagrade uppgifter hos oss</label>
 					</div>
 
 					<div class="form-check mb-4">
-						<input name="group2" type="radio" class="form-check-input with-gap" id="radioWithGap6">
+						<input name="CustomerCase" value="Correct" type="radio" class="form-check-input with-gap" id="radioWithGap6">
 						<label class="form-check-label" for="radioWithGap6">Rättelse av dina uppgifter</label>
 					</div>
 
 					<!-- Default input email -->
 					<p class="h4 mb-4">2) Telefonnummer eller e-post</p>
-					<input type="text" id="defaultFormContactEmailEx" required minlength="6" class="form-control">
+					<input type="text"  asp-for="CustomerContact" name="CustomerContact" id="defaultFormContactEmailEx" required minlength="6" class="form-control">
 
 					<br>
 
 					<!-- Default textarea message -->
 					<p class="h4 mb-4">3) Meddelande till Insplanet</p>
-					<textarea type="text" id="defaultFormContactMessageEx" pattern="\w" class="form-control" maxlength="300" rows="3"></textarea>
-						<div class="text-center py-4 mt-3">
-							<button id="submit" class="btn btn-primary" type="submit"  asp-page="/Thankyou">Skicka in din ansökan</button>
-						</div>
+					<textarea type="text" asp-for="CustomerMessage" name="CustomerMessage" id="defaultFormContactMessageEx" pattern="\w" class="form-control" maxlength="300" rows="3"></textarea>
+					<div class="text-center py-4 mt-3">
+						<button id="submit" class="btn btn-primary" type="submit">Skicka in din ansökan</button>
+					</div>
 
 				</div>
 			</div>
